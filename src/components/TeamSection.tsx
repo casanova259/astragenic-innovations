@@ -11,20 +11,68 @@ const TeamSection = () => {
   const [showPopup, setShowPopup] = useState(false);
   const [selectedMember, setSelectedMember] = useState<TeamMember | null>(null);
   
-  // Sample team member details
+  // Team member details with new uploaded images
   const teamMembers: TeamMember[] = [
-    { name: "Debarghya Bhowmick", designation: "Chief Executive Officer", image: "/db.jpg" },
-    { name: "Sahina Sabnam", designation: "Managing Director & AI Engineer", image: "/sah.jpg" },
-    { name: "Mayank Kumar Jha", designation: "Chief Technology Officer & MERN Stack Developer", image: "/mayank.png" },
-    { name: "Manik Sharma", designation: "Chief Finance Officer & Full Stack Developer", image: "/ms.jpg" },
-    { name: "Tulsi Gupta", designation: "Python Developer", image: "/tg.jpg" },
-    { name: "Rehaan Sharma", designation: "MERN Stack Developer", image: "/rs.jpg" },
-    { name: "Suman Kumar", designation: "MERN Stack Developer", image: "/sk.jpg" },
-    { name: "Gopal Kumar Mahto", designation: "Cybersecurity Specialist", image: "/gkm.jpg" },
-    { name: "Nandini Gupta", designation: "UI/UX Developer", image: "/ng.jpg" },
-    { name: "Prodipta Dutta", designation: "Backend Developer", image: "/pd.jpg" },
-    { name: "Sumeet Rawat", designation: "App Developer", image: "/sr.jpg" },
-    { name: "Ashish Ranjan Pathak", designation: "JAVA Full Stack Developer", image: "/arp.jpg" }
+    { 
+      name: "Debarghya Bhowmick", 
+      designation: "Chief Executive Officer", 
+      image: "/lovable-uploads/9c344e79-b7e9-485e-9e81-c6e039e3331c.png" 
+    },
+    { 
+      name: "Sahina Sabnam", 
+      designation: "Managing Director & AI Engineer", 
+      image: "/lovable-uploads/f8ead59f-b99b-4c37-a707-631cdb594c49.png" 
+    },
+    { 
+      name: "Mayank Kumar Jha", 
+      designation: "Chief Technology Officer & MERN Stack Developer", 
+      image: "/lovable-uploads/c7a3778e-fd52-45cf-84a1-fa12cc18e179.png" 
+    },
+    { 
+      name: "Manik Sharma", 
+      designation: "Chief Finance Officer & Full Stack Developer", 
+      image: "/lovable-uploads/ff0d63df-3957-4d6a-aa42-f8e1892ffd4d.png" 
+    },
+    { 
+      name: "Tulsi Gupta", 
+      designation: "Python Developer", 
+      image: "/lovable-uploads/e51b9f08-17e3-4629-9ad6-6e46f598c01c.png" 
+    },
+    { 
+      name: "Rehaan Sharma", 
+      designation: "MERN Stack Developer", 
+      image: "/lovable-uploads/60b2a214-6f08-47c6-abec-b9c398215014.png" 
+    },
+    { 
+      name: "Suman Kumar", 
+      designation: "MERN Stack Developer", 
+      image: "/lovable-uploads/860a4c8c-b6c1-4cb4-ac8b-3a0ad50bc3f7.png" 
+    },
+    { 
+      name: "Gopal Kumar Mahto", 
+      designation: "Cybersecurity Specialist", 
+      image: "/lovable-uploads/06b98725-d47b-4078-b9d9-063b28192f64.png" 
+    },
+    { 
+      name: "Nandini Gupta", 
+      designation: "UI/UX Developer", 
+      image: "/lovable-uploads/e71924d0-40c6-4809-96fc-9182512c2196.png" 
+    },
+    { 
+      name: "Prodipta Dutta", 
+      designation: "Backend Developer", 
+      image: "/lovable-uploads/524d9499-1ec4-46c2-9668-75cfa2feefd5.png" 
+    },
+    { 
+      name: "Sumeet Rawat", 
+      designation: "App Developer", 
+      image: "/lovable-uploads/f8ead59f-b99b-4c37-a707-631cdb594c49.png" // Using same image as placeholder
+    },
+    { 
+      name: "Ashish Ranjan Pathak", 
+      designation: "JAVA Full Stack Developer", 
+      image: "/lovable-uploads/c62d9159-34d1-45fd-b4f4-c32ceeeae93a.png" 
+    }
   ];
 
   const handleMemberClick = (member: TeamMember) => {
@@ -70,12 +118,12 @@ const TeamSection = () => {
         {/* Popup */}
         {showPopup && selectedMember && (
           <div className="fixed inset-0 bg-black/60 flex justify-center items-center z-50 popup-overlay" onClick={closePopup}>
-            <div className="bg-white rounded-lg p-6 w-64 text-center shadow-2xl animate-fade-in">
+            <div className="bg-white rounded-lg p-6 w-72 text-center shadow-2xl animate-fade-in">
               <span className="absolute top-2 right-4 text-2xl cursor-pointer text-black close-popup">&times;</span>
               <img 
                 src={selectedMember.image} 
                 alt={selectedMember.name} 
-                className="w-24 h-24 rounded-full mx-auto mb-4 border-2 border-cyan-500"
+                className="w-28 h-28 rounded-full mx-auto mb-4 border-2 border-cyan-500 object-cover"
               />
               <h3 className="text-black font-semibold text-lg">{selectedMember.name}</h3>
               <p className="text-black">{selectedMember.designation}</p>
