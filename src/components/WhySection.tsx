@@ -5,7 +5,7 @@ import FeatureCard from './FeatureCard';
 const WhySection = () => {
   return (
     <section className="relative min-h-screen w-full py-24 px-4 flex flex-col justify-center items-center">
-      <div className="container mx-auto text-center max-w-4xl">
+      <div className="container mx-auto text-center max-w-6xl">
         <div className="opacity-0 animate-fade-in">
           <h2 className="text-5xl font-bold astra-title-gradient mb-6">
             Why <span>AstraGenX?</span>
@@ -25,7 +25,7 @@ const WhySection = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mt-10">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-10">
           <FeatureCard
             icon={Lightbulb}
             title="Innovation Without Limits"
