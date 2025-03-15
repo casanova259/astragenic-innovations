@@ -106,6 +106,10 @@ export default {
         'float': {
           '0%, 100%': { transform: 'translateY(0)' },
           '50%': { transform: 'translateY(-10px)' }
+        },
+        'spin-slow': {
+          '0%': { transform: 'rotate(0deg)' },
+          '100%': { transform: 'rotate(360deg)' }
         }
       },
       animation: {
@@ -114,9 +118,11 @@ export default {
         'glow': 'glow 2s infinite alternate',
         'fade-in': 'fade-in 0.6s ease-out forwards',
         'scale-in': 'scale-in 0.5s ease-out forwards',
-        'float': 'float 3s ease-in-out infinite'
+        'float': 'float 3s ease-in-out infinite',
+        'spin-slow': 'spin-slow 40s infinite linear'
       }
     }
   },
   plugins: [require("tailwindcss-animate")],
 } satisfies Config;
+

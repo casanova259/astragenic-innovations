@@ -1,4 +1,3 @@
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -113,4 +112,18 @@
 .glass-card {
   @apply bg-white/10 backdrop-blur-md border-2 border-astra-primary/40 rounded-2xl;
   box-shadow: 0 0 10px rgba(0, 217, 255, 0.5);
+}
+
+/* Team section classes */
+.member img {
+  transition: all 0.3s ease;
+}
+
+.member:hover img {
+  border-color: #ff00ff;
+  box-shadow: 0 0 15px rgba(0, 217, 255, 0.8);
+}
+
+.dial-pad {
+  transition: transform 0.5s ease-in-out;
 }
