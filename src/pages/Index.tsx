@@ -1,12 +1,25 @@
-// Update this page (the content is just a fallback if you fail to update the page)
+
+import { useEffect } from 'react';
+import Navbar from '../components/Navbar';
+import WhySection from '../components/WhySection';
 
 const Index = () => {
+  useEffect(() => {
+    // Add a dark overlay to the background
+    document.body.style.backgroundImage = 'linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.85))';
+    
+    return () => {
+      document.body.style.backgroundImage = '';
+    };
+  }, []);
+
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gray-100">
-      <div className="text-center">
-        <h1 className="text-4xl font-bold mb-4">Welcome to Your Blank App</h1>
-        <p className="text-xl text-gray-600">Start building your amazing project here!</p>
-      </div>
+    <div className="flex flex-col min-h-screen overflow-x-hidden">
+      <Navbar />
+      
+      <main className="flex-grow">
+        <WhySection />
+      </main>
     </div>
   );
 };
