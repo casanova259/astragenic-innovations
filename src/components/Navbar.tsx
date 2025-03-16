@@ -38,7 +38,7 @@ const Navbar = () => {
             <Link to="/" className="text-white/90 hover:text-astra-primary px-4 py-2 block transition-colors duration-300">Products</Link>
           </li>
           <li className="my-2 lg:my-0 lg:mx-4">
-            <Link to="/" className="text-white/90 hover:text-astra-primary px-4 py-2 block transition-colors duration-300">Expertise</Link>
+            <Link to="/expertise" className="text-white/90 hover:text-astra-primary px-4 py-2 block transition-colors duration-300">Expertise</Link>
           </li>
           <li className="my-2 lg:my-0 lg:mx-4">
             <Link to="/achievements" className="text-white/90 hover:text-astra-primary px-4 py-2 block transition-colors duration-300">Achievement</Link>

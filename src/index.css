@@ -155,3 +155,31 @@
 .animate-pulse-slow {
   animation: pulse-slow 2s infinite;
 }
+
+/* Expertise section floating animation */
+@keyframes float {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.animate-float {
+  animation: float 4s ease-in-out infinite;
+}
+
+/* Expertise card styles */
+.expertise-title {
+  font-size: 3rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  background: linear-gradient(90deg, #00bfff, #ececec);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 40px;
+}
