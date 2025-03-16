@@ -74,7 +74,7 @@ const ProductsSection = () => {
   };
 
   return (
-    <section className="products text-center py-24 px-4 text-white overflow-hidden min-h-screen">
+    <section id="products" className="products text-center py-24 px-4 text-white overflow-hidden min-h-screen">
       <h2 className="products-title text-5xl font-bold uppercase astra-title-gradient mb-10">
         Our <span>Products</span>
       </h2>

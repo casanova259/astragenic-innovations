@@ -1,35 +1,36 @@
 
+import { Rocket, ShieldCheck, Lightbulb, Users, Sparkles, RefreshCcw } from 'lucide-react';
 import FeatureCard from './FeatureCard';
 
 const WhySection = () => {
   const features = [
     {
-      icon: 'rocket',
+      icon: Rocket,
       title: 'Innovation',
       description: 'We pioneer cutting-edge solutions that redefine technological boundaries.',
     },
     {
-      icon: 'shield-check',
+      icon: ShieldCheck,
       title: 'Security',
       description: 'Your data protection is our priority with military-grade encryption.',
     },
     {
-      icon: 'lightbulb',
+      icon: Lightbulb,
       title: 'Efficiency',
       description: 'Optimized solutions that make your workflows seamless and productive.',
     },
     {
-      icon: 'users',
+      icon: Users,
       title: 'Expertise',
       description: 'A team of specialists dedicated to solving complex challenges.',
     },
     {
-      icon: 'sparkles',
+      icon: Sparkles,
       title: 'AI-Powered',
       description: 'Leveraging artificial intelligence to deliver intelligent solutions.',
     },
     {
-      icon: 'refresh-ccw',
+      icon: RefreshCcw,
       title: 'Adaptability',
       description: 'Flexible systems that evolve with your changing requirements.',
     },

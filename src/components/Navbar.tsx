@@ -24,27 +24,33 @@ const Navbar = () => {
     setIsMenuOpen(!isMenuOpen);
   };
 
+  const handleNavLinkClick = () => {
+    if (isMenuOpen) {
+      setIsMenuOpen(false);
+    }
+  };
+
   return (
     <nav className={`fixed w-full top-0 left-0 z-50 transition-all duration-300 ${scrolled ? 'py-2 bg-black/30 backdrop-blur-md' : 'py-4'}`}>
       <div className="container mx-auto px-4 flex justify-center items-center">
         <ul className={`flex items-center lg:bg-black lg:border-2 lg:border-transparent lg:rounded-xl lg:px-6 lg:py-1 lg:shadow-lg lg:animate-glow transition-all duration-300 ${isMenuOpen ? 'flex-col absolute top-16 left-0 w-full bg-black/90 backdrop-blur-md rounded-xl py-4' : 'hidden lg:flex'}`}>
           <li className="my-2 lg:my-0 lg:mx-4">
-            <Link to="/" className="text-white/90 hover:text-astra-primary px-4 py-2 block transition-colors duration-300">Home</Link>
+            <Link to="/" className="text-white/90 hover:text-astra-primary px-4 py-2 block transition-colors duration-300" onClick={handleNavLinkClick}>Home</Link>
           </li>
           <li className="my-2 lg:my-0 lg:mx-4">
-            <a href="#why-section" className="text-white/90 hover:text-astra-primary px-4 py-2 block transition-colors duration-300">Why AstraGenX?</a>
+            <a href="#why-section" className="text-white/90 hover:text-astra-primary px-4 py-2 block transition-colors duration-300" onClick={handleNavLinkClick}>Why AstraGenX?</a>
           </li>
           <li className="my-2 lg:my-0 lg:mx-4">
-            <a href="#products" className="text-white/90 hover:text-astra-primary px-4 py-2 block transition-colors duration-300">Products</a>
+            <a href="#products" className="text-white/90 hover:text-astra-primary px-4 py-2 block transition-colors duration-300" onClick={handleNavLinkClick}>Products</a>
           </li>
           <li className="my-2 lg:my-0 lg:mx-4">
-            <Link to="/expertise" className="text-white/90 hover:text-astra-primary px-4 py-2 block transition-colors duration-300">Expertise</Link>
+            <Link to="/expertise" className="text-white/90 hover:text-astra-primary px-4 py-2 block transition-colors duration-300" onClick={handleNavLinkClick}>Expertise</Link>
           </li>
           <li className="my-2 lg:my-0 lg:mx-4">
-            <Link to="/achievements" className="text-white/90 hover:text-astra-primary px-4 py-2 block transition-colors duration-300">Achievement</Link>
+            <Link to="/achievements" className="text-white/90 hover:text-astra-primary px-4 py-2 block transition-colors duration-300" onClick={handleNavLinkClick}>Achievement</Link>
           </li>
           <li className="my-2 lg:my-0 lg:mx-4">
-            <Link to="/team" className="text-white/90 hover:text-astra-primary px-4 py-2 block transition-colors duration-300">Team</Link>
+            <Link to="/team" className="text-white/90 hover:text-astra-primary px-4 py-2 block transition-colors duration-300" onClick={handleNavLinkClick}>Team</Link>
           </li>
         </ul>
         
