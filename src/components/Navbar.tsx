@@ -32,10 +32,10 @@ const Navbar = () => {
             <Link to="/" className="text-white/90 hover:text-astra-primary px-4 py-2 block transition-colors duration-300">Home</Link>
           </li>
           <li className="my-2 lg:my-0 lg:mx-4">
-            <Link to="/" className="text-white/90 hover:text-astra-primary px-4 py-2 block transition-colors duration-300">Why AstraGenX?</Link>
+            <a href="#why-section" className="text-white/90 hover:text-astra-primary px-4 py-2 block transition-colors duration-300">Why AstraGenX?</a>
           </li>
           <li className="my-2 lg:my-0 lg:mx-4">
-            <Link to="/" className="text-white/90 hover:text-astra-primary px-4 py-2 block transition-colors duration-300">Products</Link>
+            <a href="#products" className="text-white/90 hover:text-astra-primary px-4 py-2 block transition-colors duration-300">Products</a>
           </li>
           <li className="my-2 lg:my-0 lg:mx-4">
             <Link to="/expertise" className="text-white/90 hover:text-astra-primary px-4 py-2 block transition-colors duration-300">Expertise</Link>
