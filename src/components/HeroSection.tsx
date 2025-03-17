@@ -1,12 +1,14 @@
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faFacebook, faInstagram, faLinkedin, faXTwitter } from '@fortawesome/free-brands-svg-icons';
+import BlackHoleAnimation from './BlackHoleAnimation';
 
 const HeroSection = () => {
   return (
-    <section className="flex flex-col justify-center items-center text-center h-screen py-24 px-4">
-      <div className="hero-content">
-        <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold font-sans astra-gradient-text">
+    <section className="relative flex flex-col justify-center items-center text-center h-screen py-24 px-4 overflow-hidden">
+      <BlackHoleAnimation />
+      <div className="hero-content z-10 animate-fade-in">
+        <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold font-sans astra-gradient-text animate-pulse-slow">
           AstraGenX
         </h1>
         <p className="text-xl md:text-2xl mt-6 max-w-3xl mx-auto leading-relaxed">
