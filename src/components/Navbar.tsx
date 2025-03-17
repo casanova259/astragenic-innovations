@@ -1,12 +1,13 @@
 
 import { useState, useEffect } from 'react';
 import { Menu } from 'lucide-react';
-import { Link, useLocation } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const location = useLocation();
+  const navigate = useNavigate();
   const isHomePage = location.pathname === '/';
 
   useEffect(() => {
@@ -21,6 +22,19 @@ const Navbar = () => {
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
+
+  // Check for hash in URL when on home page
+  useEffect(() => {
+    if (isHomePage && location.hash) {
+      const sectionId = location.hash.slice(1); // Remove the # character
+      const element = document.getElementById(sectionId);
+      if (element) {
+        setTimeout(() => {
+          element.scrollIntoView({ behavior: 'smooth' });
+        }, 100);
+      }
+    }
+  }, [isHomePage, location.hash]);
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
@@ -42,8 +56,8 @@ const Navbar = () => {
         element.scrollIntoView({ behavior: 'smooth' });
       }
     } else {
-      // If not on home page, navigate to home and add hash to URL
-      window.location.href = `/#${sectionId}`;
+      // If not on home page, navigate to home with hash
+      navigate(`/#${sectionId}`);
     }
   };
 
